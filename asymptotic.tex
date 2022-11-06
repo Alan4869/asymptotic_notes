@@ -1,0 +1,95 @@
+\documentclass[10pt, a4paper]{book}
+\usepackage[left=1.50cm,right=1.50cm,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{amsmath, amsthm, amssymb, bm, graphicx, mathrsfs}
+\usepackage[UTF8]{ctex}
+\usepackage[colorlinks,
+linkcolor = blue,		
+anchorcolor = blue,
+urlcolor = blue,		
+citecolor = black,		
+]{hyperref}
+
+
+
+
+% \linespread{1.5}
+\newtheorem{theorem}{定理}[section]
+\newtheorem{definition}{定义}[section]
+\newtheorem{lemma}[theorem]{引理}
+\newtheorem{corollary}[theorem]{推论}
+\newtheorem{example}{例}[section]
+\newtheorem{proposition}[theorem]{命题}
+
+
+\newenvironment{solution}{\par\noindent\textbf{解答. }}{\\\par}
+
+\begin{document}
+
+%\input{titlepage.tex}
+
+\begin{titlepage}
+    \vspace*{1.75\baselineskip}
+    \begin{flushleft}
+        \Huge{渐近法与摄动理论}\\
+    \end{flushleft}
+    %\vspace{0.2\baselineskip} % Whitespace below the title
+	\rule{18cm}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}\\ % Thin horizontal rule
+	\rule{18cm}{1.6pt} % Thick horizontal rule
+	
+    \vspace{15cm} % Whitespace after the title block
+    \begin{flushleft}
+       \large  红叶西江
+    \end{flushleft}
+    
+        
+\end{titlepage}
+
+\pagenumbering{roman}
+\setcounter{page}{1}
+
+\begin{center}
+    \Huge\textbf{前言}
+\end{center}~\
+
+这门课主要讲授如何近似求解常微分方程、近似求积分或者是级数等无法精确求解的东西。
+开课老师为数学科学学院的鲁汪涛老师，中文授课，英文讲义和英文试卷。
+
+成绩占比如下：作业30 \% ，课堂表现10\% ，最后的考试60\%。考试难度与作业难度相当，且安排在最后一节课上进行随堂考试，不做另外安排。
+
+教材为《Advanced Mathematical Methods for Scientists and Engineers》中的第一卷《Asymptotic Methods and Perturbation Theory》。
+课本的每一章开头，均有一段福尔摩斯的原话。
+
+课程内容主要强调微分方程等连续的对象，对差分方程这样离散的的对象处理得比较简单或干脆略去。主要讲授课本的以下几章：
+
+第一章主要复习常微分方程中的相关概念。第三章和第四章讲常微分方程的近似求解，分别对应线性和非线性两种情形。
+第六章讲积分的渐近展开。第七章摄动级数，第八章级数求和的方法。第九章边界层理论，第十章WKB近似。（这份笔记的章节编号不会与书本编号相同）
+
+其中，重点是第3,6,7,9,10五部分。
+
+至少先修微积分和常微分方程这两门课，不论是一般的工科版还是专业的数院版。
+
+%力学系和物理系的同学可以看一下这本书的边界层理论和WKB近似
+\begin{flushright}
+    \begin{tabular}{c}
+        红叶西江\\
+        \today
+    \end{tabular}
+\end{flushright}
+
+\newpage
+\pagenumbering{Roman}
+\setcounter{page}{1}
+
+\tableofcontents
+
+\newpage
+\setcounter{page}{1}
+\pagenumbering{arabic}
+
+
+\include{ode}
+\include{appro_slo_lde}
+% \chapter{chapter02} 
+% \section{ceshi}
+% 测试
+\end{document}
